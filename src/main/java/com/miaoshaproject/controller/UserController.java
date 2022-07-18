@@ -1,6 +1,8 @@
 package com.miaoshaproject.controller;
 
 import com.miaoshaproject.controller.viewobject.UserVO;
+import com.miaoshaproject.error.BusinessException;
+import com.miaoshaproject.error.EmBusinessError;
 import com.miaoshaproject.response.CommonReturnType;
 import com.miaoshaproject.service.UserService;
 import com.miaoshaproject.service.model.UserModel;
@@ -20,8 +22,12 @@ public class UserController {
 
     @RequestMapping("/get")
     @ResponseBody
-    public CommonReturnType getUser(@RequestParam(name="id") Integer id) {
+    public CommonReturnType getUser(@RequestParam(name="id") Integer id) throws BusinessException {
         final UserModel userModel = userService.getUserById(id);
+
+        if(userModel == null) {
+            throw new BusinessException(EmBusinessError.USER_NOT_EXIST);
+        }
         final UserVO userVO = convertFromModel(userModel);
         return CommonReturnType.create(userVO);
     }
