@@ -30,6 +30,14 @@
     from sequence_info
     where name = #{name,jdbcType=VARCHAR}
   </select>
+
+  <select id="getSequenceByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sequence_info
+    where name = #{name,jdbcType=VARCHAR} for update
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated

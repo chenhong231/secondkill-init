@@ -50,4 +50,6 @@ public interface SequenceDOMapper {
      * @mbg.generated Sun Jul 17 21:57:44 CST 2022
      */
     int updateByPrimaryKey(SequenceDO record);
+
+    SequenceDO getSequenceByName(String name);
 }
