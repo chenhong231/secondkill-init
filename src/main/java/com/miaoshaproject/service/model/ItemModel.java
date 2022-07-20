@@ -22,6 +22,7 @@ public class ItemModel {
     @NotBlank(message = "商品描述信息不能为空")
     private String description;
 
+    private PromoModel promoModel;
 
     private Integer sales;
 
@@ -82,5 +83,13 @@ public class ItemModel {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public PromoModel getPromoModel() {
+        return promoModel;
+    }
+
+    public void setPromoModel(PromoModel promoModel) {
+        this.promoModel = promoModel;
     }
 }

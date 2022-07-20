@@ -69,7 +69,7 @@
                       enableSelectByExample="false"
                       selectByExampleQueryId="false" ></table>
 
-                -->
+
 
                        <table tableName="order_info" domainObjectName="OrderDO"
                               enableCountByExample="false"
@@ -78,20 +78,20 @@
                               enableSelectByExample="false"
                               selectByExampleQueryId="false" ></table>
 
-        <!--
+
                 <table tableName="sequence_info" domainObjectName="SequenceDO"
                        enableCountByExample="false"
                        enableUpdateByExample="false"
                        enableDeleteByExample="false"
                        enableSelectByExample="false"
                        selectByExampleQueryId="false" ></table>
-
+ -->
                 <table tableName="promo" domainObjectName="PromoDO"
                        enableCountByExample="false"
                        enableUpdateByExample="false"
                        enableDeleteByExample="false"
                        enableSelectByExample="false"
-                       selectByExampleQueryId="false" ></table> -->
+                       selectByExampleQueryId="false" ></table>
 
     </context>
 </generatorConfiguration>
